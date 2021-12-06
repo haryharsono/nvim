@@ -1,0 +1,45 @@
+{
+  "languageserver": {
+    "rescript": {
+      "enable": true,
+      "module": "~/evl/rescript-vscode/server/out/server.js",
+      "args": ["--node-ipc"],
+      "filetypes": ["rescript"],
+      "rootPatterns": ["bsconfig.json"]
+    },
+    "reason": {
+      "command": "~/.local/bin/reason-language-server",
+      "filetypes": ["reason"]
+    },
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh", "zsh"],
+      "ignoredRootPaths": ["~"]
+    }
+  },
+  "sh.enable": true,
+  "diagnostic.virtualText": true,
+  "diagnostic.errorSign": "👿",
+  "diagnostic.warningSign": "⚠️",
+  "diagnostic.infoSign": "ℹ️",
+  "diagnostic.hintSign": "👀",
+  "codeLens.enable": true,
+  "suggest.snippetIndicator": "~>",
+  "coc.preferences.formatOnSaveFiletypes": [
+    "bash",
+    "shell",
+    "zsh",
+    "reason",
+    "rescript",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "graphql",
+    "json",
+    "java",
+    "yaml"
+  ]
+}
+
