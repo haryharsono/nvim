@@ -40,6 +40,18 @@
     "json",
     "java",
     "yaml"
+  ],
+   "eslint.autoFixOnSave": true,
+   "tsserver.formatOnType": true,
+  "coc.preferences.formatOnType": true,
+  "eslint.filetypes": ["javascript", "javascriptreact", "typescript", "typescriptreact","java"],
+  "java.referencesCodeLens.enabled": true,
+  "java.jdt.ls.vmargs": "-javaagent:/usr/local/share/lombok/lombok.jar",
+  "java.configuration.runtimes": [
+  {
+    "name": "graalvm-ce-java17-21.0.0",
+    "path": "/usr/lib/jvm/graalvm-ce-java17-21.3.0"
+  }
   ]
 }
 

@@ -1,7 +1,9 @@
+set number
 call plug#begin()
     " Appearance
     Plug 'vim-airline/vim-airline'
     Plug 'ryanoasis/vim-devicons'
+    
 
     " Utilities
     Plug 'sheerun/vim-polyglot'
@@ -24,14 +26,24 @@ call plug#begin()
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
     Plug 'leafgarland/typescript-vim'
-    Plug 'peitalin/vim-jsx-typescript'
 
+    Plug 'nvim-treesitter/nvim-treesitter'
     Plug 'kyazdani42/nvim-web-devicons'
     Plug 'romgrk/barbar.nvim'
+    Plug 'pangloss/vim-javascript'
+    Plug 'leafgarland/typescript-vim'
+    Plug 'peitalin/vim-jsx-typescript'
+    Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+    Plug 'jparise/vim-graphql'
+    Plug 'Yggdroot/indentLine'
 
 
 call plug#end()
+
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 "setUp Tabline
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 " Move to previous/next
 nnoremap <silent>    <A-,> :BufferPrevious<CR>
 nnoremap <silent>    <A-.> :BufferNext<CR>
@@ -124,7 +136,7 @@ tnoremap <Esc> <C-\><C-n>
 au BufEnter * if &buftype == 'terminal' | :startinsert | endif
 " open terminal on ctrl+n
 function! OpenTerminal()
-  split term://bash
+  split term://zsh
   resize 10
 endfunction
 nnoremap <c-n> :call OpenTerminal()<CR>
