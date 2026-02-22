@@ -78,12 +78,14 @@ return {
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
 
-        -- Create new file with prompt
+        -- Create new file with prompt (in current file's directory)
         ["<Leader>fn"] = {
           function()
-            vim.ui.input({ prompt = "New file: " }, function(name)
+            local current_dir = vim.fn.expand("%:p:h")
+            if current_dir == "" then current_dir = vim.fn.getcwd() end
+            vim.ui.input({ prompt = "New file: " .. current_dir .. "/" }, function(name)
               if name and name ~= "" then
-                vim.cmd("e " .. name)
+                vim.cmd("e " .. current_dir .. "/" .. name)
               end
             end)
           end,
