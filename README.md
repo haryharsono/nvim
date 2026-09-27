@@ -4,6 +4,15 @@
 
 A template for getting started with [AstroNvim](https://github.com/AstroNvim/AstroNvim)
 
+## 📋 Requirements
+
+- [ripgrep](https://github.com/BurntSushi/ripgrep) — required for live grep search (`<leader>fw`, `<leader>fW`)
+- [fd](https://github.com/sharkdp/fd) — required for the file explorer picker (`Snacks.picker.explorer()`)
+
+```shell
+brew install ripgrep fd
+```
+
 ## 🛠️ Installation
 
 #### Make a backup of your current nvim and shared folder
