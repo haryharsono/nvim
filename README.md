@@ -6,11 +6,14 @@ A template for getting started with [AstroNvim](https://github.com/AstroNvim/Ast
 
 ## 📋 Requirements
 
+- [Neovim](https://neovim.io/) v0.10+ (stable release recommended — very new nightly builds can be ahead of what some plugins support)
+- [git](https://git-scm.com/) — required for `lazy.nvim` plugin management and installing Treesitter parsers
+- A C compiler (`cc`, `gcc`, or `clang`) — required for compiling Treesitter parsers
 - [ripgrep](https://github.com/BurntSushi/ripgrep) — required for live grep search (`<leader>fw`, `<leader>fW`)
 - [fd](https://github.com/sharkdp/fd) — required for the file explorer picker (`Snacks.picker.explorer()`)
 
 ```shell
-brew install ripgrep fd
+brew install neovim git ripgrep fd
 ```
 
 ## 🛠️ Installation
